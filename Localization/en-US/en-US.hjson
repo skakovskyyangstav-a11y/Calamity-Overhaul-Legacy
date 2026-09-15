@@ -1,0 +1,155 @@
+Mods: {
+	CalamityOverhaulLegacy: {
+		Common: {
+			SupertableBrowserOnly: Recipe-browser entry only; craft it in the Transmutation of Matter 9x9 interface
+			Tooltips.Material: Material
+			TransmutationStandardCrafting: The legacy complex crafting UI is intentionally not restored. Stand near the Transmutation of Matter to use standard crafting.
+		}
+
+		Items: {
+			CWRItem.ItemLegendOnMouseLang: Hold Shift to hear its story...
+
+			DecayParticles: {
+				DisplayName: Decay Particles
+				Tooltip: A glimpse into the origin of matter
+			}
+
+			DecaySubstance: {
+				DisplayName: Decay Substance
+				Tooltip: It decays endlessly
+			}
+
+			DissipationSubstance: {
+				DisplayName: Dissipation Substance
+				Tooltip: Reality can barely capture its essence
+			}
+
+			SpectralMatter: {
+				DisplayName: Spectral Matter
+				Tooltip: Roughly 370 quadrillion tons, perhaps
+			}
+
+			InfinityCatalyst: {
+				DisplayName: Infinity Catalyst
+				Tooltip: Your greed is about to reach its peak
+			}
+
+			InfiniteIngot: {
+				DisplayName: Infinite Ingot
+				Tooltip: The power of the cosmos rests in your palm
+			}
+
+			DarkMatterBall: {
+				DisplayName: Dark Matter Ball
+				Tooltip: Right-click while carrying an item to store it; right-click empty-handed to retrieve all contents.
+				Contents: Contents:
+			}
+
+			DarkMatterCompressorItem: {
+				DisplayName: Dark Matter Compressor
+				Tooltip: Reconstructs matter like a black hole
+			}
+
+			TransmutationOfMatterItem: {
+				DisplayName: Transmutation of Matter
+				Tooltip: Restores legacy endgame crafting through the standard crafting list
+			}
+
+			InfiniteToiletItem: {
+				DisplayName: Infinite Toilet
+				Tooltip: ""
+				OnlyZenithCondition: Zenith worlds only
+			}
+
+			InfinitePick: {
+				DisplayName: Infinite Pick
+				Tooltip: Pick form right-click fires an erasure beam and compresses drops into one Dark Matter Ball. Hammer form erases a large area including walls. Press [KEY] to switch form.
+				PickMode: Pick form
+				HammerMode: Hammer form
+				ModeHint: Press [{0}] to switch form; current: {1}
+			}
+
+			HeavenfallLongbow: {
+				DisplayName: Heavenfall Longbow
+				Tooltip: Left-click fires infinite arrows; right-click calls arrows from the heavens.
+				SkillHint: At full charge press [KEY] to invoke Vientiane Judgment
+			}
+		}
+
+		Keybinds: {
+			WeponSkill_Q.DisplayName: Weapon: Left Skill
+			CWRKeySystem.Notbound: "[Not Bound]"
+			WeaponSkill.DisplayName: Weapon Skill
+		}
+
+		EndlessDamageClassTextContent.EndlessDamageClass.DisplayName: Endless Damage
+
+		UI: {
+			SupertableUI: {
+				RecipeViewLabel: View Recipe
+				RecipeEmptyLabel: None
+				PlacementMonitorOff: Disable placement monitor
+				PlacementMonitorOn: Enable placement monitor
+				QuickPlaceMaterials: Quick place materials
+				QuickTakeMaterials: Quick take materials
+			}
+		}
+
+		QuestLogs: {
+			QuestNode: {
+				LegacyDarkMatterCompressorQuest: {
+					DisplayName: Dark Matter Compressor
+					Description: Legacy endgame path
+					DetailedDescription: Rebuild the Dark Matter Compressor after Boss Rush.
+				}
+
+				LegacyTransmutationOfMatterQuest: {
+					DisplayName: Transmutation of Matter
+					Description: Legacy endgame path
+					DetailedDescription: Rebuild the terminal matter transmutation station.
+				}
+
+				LegacyInfinityCatalystQuest: {
+					DisplayName: Infinity Catalyst
+					Description: Legacy endgame path
+					DetailedDescription: Obtain an Infinity Catalyst.
+				}
+
+				LegacyInfiniteIngotQuest: {
+					DisplayName: Infinite Ingot
+					Description: Legacy endgame path
+					DetailedDescription: Obtain an Infinite Ingot and unlock the restored endgame branches.
+				}
+
+				LegacyHeavenfallLongbowQuest: {
+					DisplayName: Heavenfall Longbow
+					Description: Infinite Ingot branch
+					DetailedDescription: Obtain the Heavenfall Longbow.
+				}
+
+				LegacyInfiniteToiletQuest: {
+					DisplayName: Infinite Toilet
+					Description: Infinite Ingot side branch
+					DetailedDescription: Obtain the Infinite Toilet.
+				}
+
+				LegacyInfinitePickQuest: {
+					DisplayName: Infinite Pick
+					Description: Infinite Ingot branch
+					DetailedDescription: Obtain the Infinite Pick.
+				}
+			}
+		}
+
+		Projectiles: {
+			HeavenRainbowImpact.DisplayName: Heaven Rainbow Impact
+			InfiniteArrow.DisplayName: Infinite Arrow
+			InfiniteRune.DisplayName: Infinite Rune
+			ParadiseArrow.DisplayName: Paradise Arrow
+			VientianePunishment.DisplayName: Vientiane Punishment
+			InfiniteEnmgs.DisplayName: Infinite Enmgs
+			InfinitePickProj.DisplayName: Infinite Pick Proj
+			SpanDMBall.DisplayName: Span D M Ball
+		}
+	}
+}

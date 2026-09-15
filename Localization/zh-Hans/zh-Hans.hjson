@@ -1,0 +1,187 @@
+Mods: {
+	CalamityOverhaulLegacy: {
+		Common: {
+			SupertableBrowserOnly: 
+			Tooltips.Material: 材料
+			TransmutationStandardCrafting: 旧版复杂合成界面未恢复；靠近聚合仪即可使用标准合成列表。
+		}
+
+		Items: {
+			CWRItem.ItemLegendOnMouseLang: 按下'Shift'聆听故事...
+
+			DecayParticles: {
+				DisplayName: 虚粒子
+				Tooltip:
+					'''
+					对物质本源的一丝窥视
+					存在本身便是一种奇迹
+					'''
+			}
+
+			DecaySubstance: {
+				DisplayName: 衰变物质
+				Tooltip:
+					'''
+					它在无穷无尽的衰败着
+					循环着毁灭与新生
+					'''
+			}
+
+			DissipationSubstance: {
+				DisplayName: 消渐物质
+				Tooltip:
+					'''
+					现实已经难以捕捉它的本质
+					它不断的消散，但又无比庞大
+					'''
+			}
+
+			SpectralMatter: {
+				DisplayName: 幽灵物质
+				Tooltip: 大约3700000亿吨吧
+			}
+
+			InfinityCatalyst: {
+				DisplayName: 无尽催化剂
+				Tooltip: 你的贪婪即将达到顶点
+			}
+
+			InfiniteIngot: {
+				DisplayName: 无尽锭
+				Tooltip: 寰宇之力，就在掌中
+			}
+
+			DarkMatterBall: {
+				DisplayName: 暗物质球
+				Tooltip:
+					'''
+					它已经被压缩成了黑洞，但却奇迹般的保持住了稳定状态
+					手持物品右键可以将物品存入其中
+					空手右键可以将全部容纳物取出
+					'''
+				Contents: 内容物:
+			}
+
+			DarkMatterCompressorItem: {
+				DisplayName: 暗物质压缩机
+				Tooltip: 如黑洞般重构物质
+			}
+
+			TransmutationOfMatterItem: {
+				DisplayName: 终焉物质聚合仪
+				Tooltip:
+					'''
+					放置后可进行旧版终焉合成
+					"你的贪婪之旅将正式启程"
+					'''
+			}
+
+			InfiniteToiletItem: {
+				DisplayName: 无限马桶
+				Tooltip: ""
+				OnlyZenithCondition: 仅在天顶世界
+			}
+
+			InfinitePick: {
+				DisplayName: 寰宇贪婪镐
+				Tooltip:
+					'''
+					镐形态右键发射抹除光线，并将掉落物压入一个暗物质球
+					锤形态右键抹除鼠标附近的大范围方块与墙体
+					按下[KEY]切换形态
+					"你可以感觉到，每当你握住，泰拉瑞亚的土地就会在恐惧中颤抖"
+					'''
+				PickMode: 镐形态
+				HammerMode: 锤形态
+				ModeHint: 按下[KEY]切换形态
+			}
+
+			HeavenfallLongbow: {
+				DisplayName: 天堂陨落长弓
+				Tooltip:
+					'''
+					发射无尽之箭，终焉彩虹能量将随后而至
+					右键让天堂之箭从天而降
+					蓄力完成后按下[KEY]启动万象审判
+					'''
+				SkillHint: 充能完成后按 [{0}] 启动万象审判
+			}
+		}
+
+		Keybinds: {
+			WeponSkill_Q.DisplayName: 武器:左技能键
+			CWRKeySystem.Notbound: "[未绑定按键]"
+			WeaponSkill.DisplayName: 武器技能
+		}
+
+		EndlessDamageClassTextContent.EndlessDamageClass.DisplayName: 无尽伤害
+
+		UI: {
+			SupertableUI: {
+				RecipeViewLabel: 查看配方
+				RecipeEmptyLabel: 无
+				PlacementMonitorOff: 关闭摆放监视
+				PlacementMonitorOn: 开启摆放监视
+				QuickPlaceMaterials: 快捷放置材料
+				QuickTakeMaterials: 快捷拿取材料
+			}
+		}
+
+		QuestLogs: {
+			QuestNode: {
+				LegacyDarkMatterCompressorQuest: {
+					DisplayName: 暗物质压缩机
+					Description: 旧版终焉主轴
+					DetailedDescription: 在终末之战之后重建暗物质压缩机。
+				}
+
+				LegacyTransmutationOfMatterQuest: {
+					DisplayName: 终焉物质聚合仪
+					Description: 旧版终焉主轴
+					DetailedDescription: 以暗物质压缩机为基础，重建终焉物质聚合仪。
+				}
+
+				LegacyInfinityCatalystQuest: {
+					DisplayName: 无尽催化剂
+					Description: 旧版终焉主轴
+					DetailedDescription: 获得无尽催化剂。
+				}
+
+				LegacyInfiniteIngotQuest: {
+					DisplayName: 无尽锭
+					Description: 旧版终焉主轴
+					DetailedDescription: 获得无尽锭，开启旧版终局装备分支。
+				}
+
+				LegacyHeavenfallLongbowQuest: {
+					DisplayName: 天堂陨落长弓
+					Description: 无尽锭分支
+					DetailedDescription: 获得天堂陨落长弓。
+				}
+
+				LegacyInfiniteToiletQuest: {
+					DisplayName: 无限马桶
+					Description: 无尽锭支线
+					DetailedDescription: 获得无限马桶。
+				}
+
+				LegacyInfinitePickQuest: {
+					DisplayName: 寰宇贪婪镐
+					Description: 无尽锭分支
+					DetailedDescription: 获得寰宇贪婪镐。
+				}
+			}
+		}
+
+		Projectiles: {
+			// HeavenRainbowImpact.DisplayName: Heaven Rainbow Impact
+			// InfiniteArrow.DisplayName: Infinite Arrow
+			// InfiniteRune.DisplayName: Infinite Rune
+			// ParadiseArrow.DisplayName: Paradise Arrow
+			// VientianePunishment.DisplayName: Vientiane Punishment
+			// InfiniteEnmgs.DisplayName: Infinite Enmgs
+			// InfinitePickProj.DisplayName: Infinite Pick Proj
+			// SpanDMBall.DisplayName: Span D M Ball
+		}
+	}
+}

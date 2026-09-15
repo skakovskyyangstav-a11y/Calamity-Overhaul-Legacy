@@ -1,0 +1,86 @@
+using InnoVault.PRT;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
+using System;
+using Terraria;
+
+namespace CalamityOverhaulLegacy.Content.PRTTypes
+{
+    internal class PRT_Light : BasePRT
+    {
+        public override string Texture => CWRConstant.Masking + "Photosphere";
+        public override bool CanPool => true;
+        public float SquishStrenght;
+        public float MaxSquish;
+        public float HueShift;
+        public float followingRateRatio;
+        public Entity entity;
+        [VaultLoaden(CWRConstant.Masking + "DiffusionCircle6")]
+        internal static Asset<Texture2D> BloomTex = null;
+        public PRT_Light() {
+            Lifetime = 30;
+            Opacity = 1f;
+            SquishStrenght = 1f;
+            MaxSquish = 3f;
+            followingRateRatio = 0.9f;
+        }
+
+        public PRT_Light Configure(int lifetime, float opacity = 1f
+            , float squishStrenght = 1f, float maxSquish = 3f, float hueShift = 0f, Entity _entity = null, float _followingRateRatio = 0.9f) {
+            Opacity = opacity;
+            Lifetime = lifetime;
+            SquishStrenght = squishStrenght;
+            MaxSquish = maxSquish;
+            HueShift = hueShift;
+            entity = _entity;
+            followingRateRatio = _followingRateRatio;
+            return this;
+        }
+
+        public override void SetProperty() => PRTDrawMode = PRTDrawModeEnum.AdditiveBlend;
+        public override void AI() {
+            Velocity *= (LifetimeCompletion >= 0.34f) ? 0.93f : 1.02f;
+
+            Opacity = LifetimeCompletion > 0.5f ? ((float)Math.Sin(LifetimeCompletion * MathHelper.Pi) * 0.2f) + 0.8f : (float)Math.Sin(LifetimeCompletion * MathHelper.Pi);
+            Scale *= 0.95f;
+
+            Vector3 hsl = Main.rgbToHsl(Color);
+            Color = Main.hslToRgb(hsl.X + HueShift, hsl.Y, hsl.Z);
+
+            if (entity != null && entity.active) {
+                Position += entity.velocity * followingRateRatio;
+            }
+        }
+
+        public override bool PreDraw(SpriteBatch spriteBatch) {
+            Texture2D tex = PRTLoader.PRT_IDToTexture[ID];
+            Texture2D bloomTex = BloomTex.Value;
+
+            float squish = MathHelper.Clamp(Velocity.Length() / 10f * SquishStrenght, 1f, MaxSquish);
+
+            float rot = Velocity.ToRotation() + MathHelper.PiOver2;
+            Vector2 origin = tex.Size() / 2f;
+            Vector2 scale = new(Scale - (Scale * squish * 0.3f), Scale * squish);
+            float properBloomSize = tex.Height / (float)bloomTex.Height;
+
+            Vector2 drawPosition = Position - Main.screenPosition;
+
+            Main.spriteBatch.Draw(bloomTex, drawPosition, null, Color * Opacity * 0.8f, rot, bloomTex.Size() / 2f, scale * 2 * properBloomSize, SpriteEffects.None, 0f);
+            Main.spriteBatch.Draw(tex, drawPosition, null, Color * Opacity * 0.8f, rot, origin, scale * 1.1f, SpriteEffects.None, 0f);
+            Main.spriteBatch.Draw(tex, drawPosition, null, Color.White * Opacity * 0.9f, rot, origin, scale, SpriteEffects.None, 0f);
+            return false;
+        }
+
+        public override void Reset() {
+            base.Reset();
+            Rotation = 0;
+            Lifetime = 30;
+            Opacity = 1f;
+            SquishStrenght = 1f;
+            MaxSquish = 3f;
+            HueShift = 0f;
+            followingRateRatio = 0.9f;
+            entity = null;
+        }
+    }
+}
