@@ -1,0 +1,4 @@
+author = Skakovsky Yangstav
+displayName = Calamity Overhaul Legacy
+version = 0.13.0.7
+modReferences = CalamityMod, CalamityOverhaul, InnoVault@1.9.97
